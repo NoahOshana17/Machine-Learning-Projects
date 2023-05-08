@@ -29,6 +29,8 @@ Histopathologic Cancer Detection/venv/Lib/
 Histopathologic Cancer Detection/venv/Scripts/
 Histopathologic Cancer Detection/venv/share/
 Histopathologic Cancer Detection/venv/pyvenv.cfg
+Histopathologic Cancer Detection/venv/test/
+Histopathologic Cancer Detection/venv/train/
 
 NLP with Disaster Tweets/venv/.ipynb_checkpoints/
 NLP with Disaster Tweets/venv/etc/
