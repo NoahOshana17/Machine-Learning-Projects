@@ -30,6 +30,6 @@ We would like to acknowledge the open-source community and the creators of the l
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, please feel free to contact us at [your-email@example.com](mailto:your-email@example.com). We appreciate your interest and hope you find these projects useful!
+If you have any questions, suggestions, or feedback, please feel free to contact me at [oshananoah@gmail.com](mailto:oshananoah@gmail.com). I appreciate your interest and hope you find these projects useful!
 
 Happy learning and exploring!
