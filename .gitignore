@@ -22,15 +22,23 @@ Supervised Learning/Heart Disease Prediction/venv/Scripts/
 Supervised Learning/Heart Disease Prediction/venv/share/
 Supervised Learning/Heart Disease Prediction/venv/pyvenv.cfg
 
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/.ipynb_checkpoints/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/etc/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/Include/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/Lib/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/Scripts/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/share/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/pyvenv.cfg
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/test/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/venv/train/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/.ipynb_checkpoints/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/etc/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/Include/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/Lib/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/Scripts/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/share/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/pyvenv.cfg
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/test/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/train/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/training_1/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/best_model_1.h5
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/model_1_trained.keras
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/sample_submission.csv
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/submission.csv
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/train_labels.csv
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/trained_model.h5
+
 
 Natural Language Processing/NLP with Disaster Tweets/venv/.ipynb_checkpoints/
 Natural Language Processing/NLP with Disaster Tweets/venv/etc/
@@ -49,3 +57,6 @@ Deep Learning/Computer Vision/License Plate Recognition/TFODCourse/
 Deep Learning/Computer Vision/License Plate Recognition/anpr/1. Image Collection.ipynb
 Deep Learning/Computer Vision/License Plate Recognition/anpr/pyvenv.cfg
 Deep Learning/Computer Vision/License Plate Recognition/anpr/Tensorflow/
+
+Deep Learning/Computer Vision/Deep Face Recognition/
+
