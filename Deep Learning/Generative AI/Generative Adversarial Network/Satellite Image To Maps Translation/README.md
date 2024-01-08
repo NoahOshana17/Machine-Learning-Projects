@@ -51,10 +51,6 @@ After the last layer, a convolution is applied to map to a 1-dimensional output,
 ![Discriminator](disc_model.png)
 
 
-## Contributing
-
-If you want to contribute to this project, please follow the [Contributing Guidelines](CONTRIBUTING.md).
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
