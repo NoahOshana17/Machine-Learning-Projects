@@ -32,6 +32,7 @@ Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/pyvenv.cfg
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/test/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/train/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/training_1/
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/training_2/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/best_model_1.h5
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/model_1_trained.keras
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/sample_submission.csv
@@ -48,15 +49,12 @@ Natural Language Processing/NLP with Disaster Tweets/venv/Scripts/
 Natural Language Processing/NLP with Disaster Tweets/venv/share/
 Natural Language Processing/NLP with Disaster Tweets/venv/pyvenv.cfg
 
-Deep Learning/Computer Vision/License Plate Recognition/anpr/.ipynb_checkpoints/
-Deep Learning/Computer Vision/License Plate Recognition/anpr/Include/
-Deep Learning/Computer Vision/License Plate Recognition/anpr/Lib/
-Deep Learning/Computer Vision/License Plate Recognition/anpr/Scripts/
-Deep Learning/Computer Vision/License Plate Recognition/anpr/share/
-Deep Learning/Computer Vision/License Plate Recognition/TFODCourse/
-Deep Learning/Computer Vision/License Plate Recognition/anpr/1. Image Collection.ipynb
-Deep Learning/Computer Vision/License Plate Recognition/anpr/pyvenv.cfg
-Deep Learning/Computer Vision/License Plate Recognition/anpr/Tensorflow/
+Deep Learning/Computer Vision/License Plate Recognition/.ipynb_checkpoints/
+Deep Learning/Computer Vision/License Plate Recognition/Tensorflow/
 
 Deep Learning/Computer Vision/Deep Face Recognition/
+Deep Learning/Computer Vision/License-Plate-Recognition/
 
+Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/.ipynb_checkpoints/
+Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/maps/
+Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/model_010960.h5
