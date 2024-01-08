@@ -26,7 +26,8 @@ Additionally, there is a U-Net variant of the architecture, which includes skip 
 
 **U-Net Decoder:**
 - CD512-CD1024-CD1024-C1024-C1024-C512-C256-C128
-- 
+
+  
 ![Generator](gen_model.png)
 
 ### Discriminator Architecture
@@ -46,7 +47,7 @@ After the last layer, a convolution is applied to map to a 1-dimensional output,
 
 **286 × 286 Discriminator:**
 - C64-C128-C256-C512-C512-C512
-- 
+  
 ![Discriminator](disc_model.png)
 
 
