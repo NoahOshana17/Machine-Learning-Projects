@@ -24,12 +24,13 @@ The primary goal of this project is to deepen understanding and gain practical e
 
 - Deep learning
 - Computer vision
+- Transfer Learning
 - CNN architecture design and implementation
 - TensorFlow for model development and training
 
 ## Approach and Methodology
 
-The project follows a systematic approach to building an effective cancer detection algorithm. This includes data preprocessing, model architecture design, training, and evaluation. The README provides insights into the methodology employed to achieve accurate results.
+The project follows a systematic approach to building an effective cancer detection algorithm. This includes data preprocessing, transfer learning, model architecture design, training, and evaluation. The README provides insights into the methodology employed to achieve accurate results.
 
 ## Model Performance
 
@@ -37,38 +38,16 @@ The model's performance is evaluated using standard metrics such as accuracy, pr
 
 ## Impact on Healthcare
 
-Highlight the potential real-world impact of the project on healthcare, emphasizing the role of accurate cancer detection in early diagnosis and improved patient care.
+The integration of AI technology into pathology has the potential to revolutionize cancer diagnosis and treatment, ultimately improving patient care and outcomes. The following are just a few examples on how this technology can impact the healthcare industry:
 
-## Training Efficiency
-
-Discuss the efficiency of the model training process, emphasizing the ability to train models on a single GPU within a reasonable timeframe.
-
-## Relevance to Fundamental Research
-
-Explore how the project aligns with fundamental machine learning research topics, such as active learning, model uncertainty, and explainability. This adds depth to the project and showcases engagement with broader research themes.
+1. Improved Diagnosis Accuracy: AI algorithms can assist pathologists in accurately detecting metastatic cancer in pathology images, reducing the likelihood of missed diagnoses or misinterpretations.
+2. Cost Savings: Through improved efficiency and accuracy, AI-powered pathology analysis has the potential to reduce healthcare costs associated with diagnostic procedures and treatments.
+3. Extended Reach: AI technology can help bridge the gap in access to specialized expertise, particularly in regions with limited resources or where there is a shortage of pathologists.
+4. Enhanced Efficiency: By automating parts of the diagnostic process, AI can streamline workflows, allowing pathologists to focus their time and expertise on more complex cases or other critical tasks.
 
 ## Future Enhancements
 
-Discuss potential future enhancements or extensions of the project, indicating a commitment to continuous improvement and exploration.
+This notebook goes through a basic process of model training and development using transfer learning. There are future enhancements and experiments we can try to further improve our model performance:
 
-## Getting Started
-
-Provide clear instructions on how to set up the project locally, including prerequisites and installation steps.
-
-## Usage
-
-Offer examples and guidelines on how to use the project, making it accessible for others interested in exploring or contributing.
-
-## Contributing
-
-Encourage contributions and provide guidelines on coding standards, setting up a development environment, and submitting pull requests.
-
-## License
-
-Specify the license under which the project is distributed.
-
-## Acknowledgments
-
-Give credit to the authors of the original dataset, PatchCamelyon, and any other relevant resources or libraries that contributed to the project.
-
-
+1. Dataset Manipulation: There are many strategies we can look into and leverage to possibly improve our model. This includes further image augmentations, class sampling (over sampling, under sampling, SMOTE, etc), and many more.
+2. Model Adjustments: Hyperparamter tuning, additional model architectures, adjusting trainable model layers, etc. 
