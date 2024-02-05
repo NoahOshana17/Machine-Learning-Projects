@@ -169,7 +169,7 @@ df = pd.read_csv('train_labels.csv')
 train_dir = 'train'
 print(df.info())
 print(df.head())
-```
+
 
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 220025 entries, 0 to 220024
@@ -188,12 +188,14 @@ None
 3  bc3f0c64fb968ff4a8bd33af6971ecae77c75e08      0
 4  068aba587a4950175d04c680d38943fd488d6a9d      0
 
-'''python
+```
+
+```python
 label_counts = df.label.value_counts()
 plt.pie(label_counts, labels=['No Cancer', 'Cancer'], startangle=90, autopct='%1.1f', colors=['green', 'red'], shadow=True)
 plt.figure(figsize=(15,15))
 plt.show()
-'''
+```
 
 
 
