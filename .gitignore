@@ -32,13 +32,13 @@ Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/pyvenv.cfg
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/test/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/train/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/training_1/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/training_2/
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/best_model_1.h5
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/model_1_trained.keras
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/model1.keras
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/model1.h5
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/sample_submission.csv
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/submission.csv
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/train_labels.csv
-Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/trained_model.h5
+Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/test.ipynb
+
 
 
 Natural Language Processing/NLP with Disaster Tweets/venv/.ipynb_checkpoints/
