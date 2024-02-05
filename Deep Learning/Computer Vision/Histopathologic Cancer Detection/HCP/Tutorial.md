@@ -202,8 +202,7 @@ plt.show()
 
 
 
-![Data Preprocessing](images/step2.png)
-Summary: Explanation of data preprocessing steps, such as cleaning, tokenization, or normalization.
+![Data Value Counts](Screenshot (3).png)
 
 ---
 
