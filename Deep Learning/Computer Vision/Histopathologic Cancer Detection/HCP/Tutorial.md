@@ -209,6 +209,49 @@ Now we will dive into the images of our dataset. These next code blocks are goin
 
 > A positive label indicates that the center 32x32px region of a patch contains at least one pixel of tumor tissue. Tumor tissue in the outer region of the patch does not influence the label. This outer region is provided to enable fully-convolutional models that do not use zero-padding, to ensure consistent behavior when applied to a whole-slide image.
 
+```python
+def readImage(path):
+    # OpenCV reads the image in bgr format by default
+    bgr_img = cv2.imread(path)
+    # We flip it to rgb for visualization purposes
+    b,g,r = cv2.split(bgr_img)
+    rgb_img = cv2.merge([r,g,b])
+    return rgb_img
+```
+```python
+# random sampling
+shuffled_data = shuffle(df)
+
+fig, ax = plt.subplots(2,5, figsize=(20,8))
+fig.suptitle('Histopathologic scans of lymph node sections',fontsize=20)
+# Negatives
+for i, idx in enumerate(shuffled_data[shuffled_data['label'] == 0]['id'][:5]):
+    path = os.path.join(train_dir, idx)
+    ax[0,i].imshow(readImage(path + '.tif'))
+    # Create a Rectangle patch
+    box = patches.Rectangle((32,32),32,32,linewidth=4,edgecolor='b',facecolor='none', linestyle=':', capstyle='round')
+    ax[0,i].add_patch(box)
+ax[0,0].set_ylabel('Negative samples', size='large')
+# Positives
+for i, idx in enumerate(shuffled_data[shuffled_data['label'] == 1]['id'][:5]):
+    path = os.path.join(train_dir, idx)
+    ax[1,i].imshow(readImage(path + '.tif'))
+    # Create a Rectangle patch
+    box = patches.Rectangle((32,32),32,32,linewidth=4,edgecolor='r',facecolor='none', linestyle=':', capstyle='round')
+    ax[1,i].add_patch(box)
+ax[1,0].set_ylabel('Tumor tissue samples', size='large')
+
+```
+
+Output: 
+
+![Images](Images.png)
+
+
+
+
+
+
 ---
 
 ## Step 3: Model Training
