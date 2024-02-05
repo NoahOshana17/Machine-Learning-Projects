@@ -169,8 +169,11 @@ df = pd.read_csv('train_labels.csv')
 train_dir = 'train'
 print(df.info())
 print(df.head())
+```
 
+Output:
 
+```python
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 220025 entries, 0 to 220024
 Data columns (total 2 columns):
