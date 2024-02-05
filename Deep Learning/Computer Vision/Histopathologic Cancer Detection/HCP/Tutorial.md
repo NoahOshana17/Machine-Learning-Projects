@@ -193,6 +193,8 @@ None
 
 ```
 
+Visualizing our class distributions:
+
 ```python
 label_counts = df.label.value_counts()
 plt.pie(label_counts, labels=['No Cancer', 'Cancer'], startangle=90, autopct='%1.1f', colors=['green', 'red'], shadow=True)
