@@ -594,12 +594,14 @@ submission_df.to_csv('submission.csv', index=False)
 
 ![Submission](Submission.png)
 
+Not bad!
 
 
 ---
 
 ## Conclusion
-This notebook goes through a basic process of model training and development using transfer learning. There are future enhancements and experiments we can try to further improve our model performance:
 
-	1. Dataset Manipulation: There are many strategies we can look into and leverage to possibly improve our model. This includes further image augmentations, class sampling (over sampling, under sampling, SMOTE, etc), and many more.
-	2. Model Adjustments: Hyperparamter tuning, additional model architectures, adjusting trainable model layers, etc.
+This notebook outlines a fundamental process of model training and development using transfer learning. We achieved commendable results with a public score of 82.29% and a private score of 79.99%, showcasing the effectiveness of basic ML and Computer Vision techniques. Moving forward, there are opportunities for enhancing our model performance:
+
+1. Dataset Enhancements: Exploring various strategies such as advanced image augmentations and class sampling techniques (over-sampling, under-sampling, SMOTE, etc.) could potentially improve our model's robustness.
+2. Model Refinements: Experimenting with hyperparameter tuning, exploring alternative model architectures, and fine-tuning trainable model layers offer avenues for further optimization.
