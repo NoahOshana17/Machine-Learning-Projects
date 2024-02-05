@@ -164,11 +164,11 @@ This project will be in Python and will be using the Tensorflow and Scikit-learn
 
 #### Initially, our task entails loading the dataset into a Pandas dataframe. Utilizing Pandas, we can delve into our dataset, extracting valuable insights and crafting visualizations to comprehend our class distributions more effectively. 
 
-'''
-    df = pd.read_csv('train_labels.csv')
-    train_dir = 'train'
-    print(df.info())
-    print(df.head())
+'''python
+df = pd.read_csv('train_labels.csv')
+train_dir = 'train'
+print(df.info())
+print(df.head())
 '''
 
 <class 'pandas.core.frame.DataFrame'>
