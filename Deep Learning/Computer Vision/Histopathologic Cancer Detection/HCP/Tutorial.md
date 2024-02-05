@@ -202,7 +202,7 @@ plt.show()
 
 
 
-![Data Value Counts](/Screenshot (3).png)
+![Data Value Counts](Screenshot (3).png)
 
 ---
 
