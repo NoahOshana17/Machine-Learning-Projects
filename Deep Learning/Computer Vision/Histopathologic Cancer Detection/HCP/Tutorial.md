@@ -203,8 +203,11 @@ plt.show()
 ```
 
 
-
 ![Data Value Counts](Screenshot.png)
+
+Now we will dive into the images of our dataset. These next code blocks are going to display 5 images from each class, and will include a 32x32 box in the center of the image. The purpose of this box is to get a better idea of where our model will be needing to distinguish between the classes, as stated in the dataset description:
+
+> A positive label indicates that the center 32x32px region of a patch contains at least one pixel of tumor tissue. Tumor tissue in the outer region of the patch does not influence the label. This outer region is provided to enable fully-convolutional models that do not use zero-padding, to ensure consistent behavior when applied to a whole-slide image.
 
 ---
 
