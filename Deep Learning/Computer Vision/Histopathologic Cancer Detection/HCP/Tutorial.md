@@ -255,20 +255,346 @@ Output:
 ---
 
 ## Step 3: Model Training
-![Model Training](images/step3.png)
-Summary: Overview of the model training process, including code snippets for model architecture, loss functions, and optimization.
+We'll navigate through several essential steps during our model training phase.
+
+#### 3.a: Dataframe Adjustments
+We need to make a couple adjsutments to our dataframe. 1, add the .tif extensions to the id column of the df. 2, convert the label from a np.int to a str
+```python
+df['id'] = df['id'] + '.tif'
+df['label'] = df['label'].astype(str)
+df.head()
+```
+
+Output: 
+```python
+	                                           id	label
+0	f38a6374c348f90b587e046aac6079959adf3835.tif	    0
+1	c18f2d887b7ae4f6742ee445113fa1aef383ed77.tif	    1
+2	755db6279dae599ebb4d39a9123cce439965282d.tif	    0
+3	bc3f0c64fb968ff4a8bd33af6971ecae77c75e08.tif    	0
+4	068aba587a4950175d04c680d38943fd488d6a9d.tif    	0
+```
+
+#### 3.b: Initialize Training Parameters and Create Train and Validiation Generators
+
+```python
+train_df, val_df = train_test_split(df, test_size=0.2, stratify=df['label'], random_state=42)
+```
+```python
+img_size = (96, 96)
+batch_size = 64
+```
+
+```python
+train_datagen = ImageDataGenerator(
+    rescale=1./255,
+    rotation_range=20,
+    horizontal_flip=True
+)
+```
+
+```python
+val_datagen = ImageDataGenerator(rescale=1./255)
+```
+
+```python
+train_generator = train_datagen.flow_from_dataframe(
+    train_df,
+    directory=train_dir,
+    x_col='id',
+    y_col='label',
+    target_size=img_size,
+    batch_size=batch_size,
+    class_mode='binary',
+    shuffle=True,
+    seed=42
+)
+val_generator = val_datagen.flow_from_dataframe(
+    val_df,
+    directory=train_dir,
+    x_col='id',
+    y_col='label',
+    target_size=img_size,
+    batch_size=batch_size,
+    class_mode='binary',
+    shuffle=False
+)
+```
+#### 3.c: Check Images Post-Augmentations
+
+```python
+## check images after augmentations
+def plot_random_samples(generator):
+    generator_size = len(generator)
+    index=random.randint(0,generator_size-1)
+    image,label = generator.__getitem__(index)
+
+    sample_number = 10
+    fig = plt.figure(figsize = (20,sample_number))
+    for i in range(0,sample_number):
+        ax = fig.add_subplot(2, 5, i+1)
+        ax.imshow(image[i])
+        if label[i]==0:
+            ax.set_title("Cancerous cells")
+        elif label[i]==1:
+            ax.set_title("Healthy cells")
+    plt.tight_layout()
+    plt.show()
+```
+
+```python
+plot_random_samples(val_generator)
+```
+
+![Images Post-Aug](Images_Aug.png)
+
+#### 3.d: Create Our Model Using Transfer Learning
+We'll harness the power of the VGG16 architecture for our model training, leveraging pre-trained Imagenet weights. By freezing the initial layers and fine-tuning the latter ones, we'll customize the model to our specific needs. Additionally, we'll incorporate our own output layer to adapt the model for our binary classification task.
+
+
+```python
+from tensorflow.keras.applications import VGG16
+pretrained = VGG16(weights='imagenet', include_top=False, input_shape=(96,96,3))
+pretrained.summary()
+```
+
+Output:
+
+```python
+Model: "vgg16"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 96, 96, 3)]       0         
+                                                                 
+ block1_conv1 (Conv2D)       (None, 96, 96, 64)        1792      
+                                                                 
+ block1_conv2 (Conv2D)       (None, 96, 96, 64)        36928     
+                                                                 
+ block1_pool (MaxPooling2D)  (None, 48, 48, 64)        0         
+                                                                 
+ block2_conv1 (Conv2D)       (None, 48, 48, 128)       73856     
+                                                                 
+ block2_conv2 (Conv2D)       (None, 48, 48, 128)       147584    
+                                                                 
+ block2_pool (MaxPooling2D)  (None, 24, 24, 128)       0         
+                                                                 
+ block3_conv1 (Conv2D)       (None, 24, 24, 256)       295168    
+                                                                 
+ block3_conv2 (Conv2D)       (None, 24, 24, 256)       590080    
+                                                                 
+ block3_conv3 (Conv2D)       (None, 24, 24, 256)       590080    
+                                                                 
+ block3_pool (MaxPooling2D)  (None, 12, 12, 256)       0         
+                                                                 
+ block4_conv1 (Conv2D)       (None, 12, 12, 512)       1180160   
+                                                                 
+ block4_conv2 (Conv2D)       (None, 12, 12, 512)       2359808   
+                                                                 
+ block4_conv3 (Conv2D)       (None, 12, 12, 512)       2359808   
+                                                                 
+ block4_pool (MaxPooling2D)  (None, 6, 6, 512)         0         
+                                                                 
+ block5_conv1 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block5_conv2 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block5_conv3 (Conv2D)       (None, 6, 6, 512)         2359808   
+                                                                 
+ block5_pool (MaxPooling2D)  (None, 3, 3, 512)         0         
+                                                                 
+=================================================================
+Total params: 14714688 (56.13 MB)
+Trainable params: 14714688 (56.13 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+```
+
+Freeze initial layers, train on last 8
+
+```python
+for layer in pretrained.layers[:-8]:
+    layer.trainable=False
+
+for layer in pretrained.layers:
+    print(layer, layer.trainable)
+```
+
+Here we are putting the model together, adding in our own output layer
+
+```python
+model = Sequential()
+model.add(pretrained)
+model.add(GlobalAveragePooling2D())
+model.add(Dense(256, use_bias=False))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(Dropout(0.6))
+
+model.add(Dense(1))
+model.add(Activation('sigmoid'))
+```
+
+Resulting Model: 
+
+```python
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ vgg16 (Functional)          (None, 3, 3, 512)         14714688  
+                                                                 
+ global_average_pooling2d_1  (None, 512)               0         
+  (GlobalAveragePooling2D)                                       
+                                                                 
+ dense_1 (Dense)             (None, 256)               131072    
+                                                                 
+ batch_normalization (Batch  (None, 256)               1024      
+ Normalization)                                                  
+                                                                 
+ activation (Activation)     (None, 256)               0         
+                                                                 
+ dropout (Dropout)           (None, 256)               0         
+                                                                 
+ dense_2 (Dense)             (None, 1)                 257       
+                                                                 
+ activation_1 (Activation)   (None, 1)                 0         
+                                                                 
+=================================================================
+Total params: 14847041 (56.64 MB)
+Trainable params: 13111041 (50.01 MB)
+Non-trainable params: 1736000 (6.62 MB)
+_________________________________________________________________
+```
+Compile Our Model:
+
+```python
+model.compile(optimizer=Adam(learning_rate=0.001), loss='binary_crossentropy', metrics=['accuracy'])
+```
+
+Initialize Our Callbacks and Checkpoints:
+
+```python
+checkpoint_path = "training_1/cp.ckpt"
+checkpoint_dir = os.path.dirname(checkpoint_path)
+```
+
+```python
+checkpoint = ModelCheckpoint(filepath=checkpoint_path,
+                             save_best_only=True,
+                             save_weights_only=True,
+                             monitor='val_accuracy',
+                             mode='max',
+                             verbose=1)
+
+early_stopping = EarlyStopping(monitor='loss', patience=5, mode='max', verbose=1)
+
+lr_adjust = ReduceLROnPlateau(monitor='val_loss', patience=1, verbose=1, factor=0.5)
+```
+
+#### 3.e: Fit Our Model
+
+```python
+history = model.fit(
+    train_generator,
+    steps_per_epoch=train_generator.samples // batch_size,
+    epochs=20,
+    validation_data=val_generator,
+    validation_steps=val_generator.samples // batch_size,
+    callbacks=[lr_adjust, checkpoint, early_stopping]
+)
+```
+
 
 ---
 
-## Step 4: Evaluation
-![Evaluation](images/step4.png)
-Summary: Description of evaluation metrics used to assess model performance and interpretation of results.
+## Step 4: Model Evaluation
+
+```python
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('Accuracy over epochs')
+plt.ylabel('Acc')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Validation'], loc='best')
+plt.show()
+```
+![Train Acc](acc.png)
+
+
+```python
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('Loss over epochs')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Validation'], loc='best')
+plt.show()
+```
+
+![Train Loss](loss.png)
+
 
 ---
 
-## Step 5: Deployment
-![Deployment](images/step5.png)
-Summary: Instructions for deploying the trained model, whether locally or on a cloud platform.
+## Step 5: Test Evaluation
+
+#### 5.a: First we need to format our test dataframe in a similar manner of the train dataframe
+
+```python
+test_df = pd.DataFrame({'id':os.listdir('test')})
+test_df.head()
+```
+
+Result:
+```python
+                                            id
+0	00006537328c33e284c973d7b39d340809f7271b.tif
+1	0000ec92553fda4ce39889f9226ace43cae3364e.tif
+2	00024a6dee61f12f7856b0fc6be20bc7a48ba3d2.tif
+3	000253dfaa0be9d0d100283b22284ab2f6b643f6.tif
+4	000270442cc15af719583a8172c87cd2bd9c7746.tif
+```
+
+#### 5.b: Create Our Test Data Generator
+```python
+test_datagen = ImageDataGenerator(
+    rescale=1. / 255)
+test_generator = test_datagen.flow_from_dataframe(
+    dataframe=test_df,
+    directory='test',
+    x_col='id',
+    y_col=None,
+    target_size=(96,96),
+    batch_size=1,
+    shuffle=False,
+    class_mode=None
+)
+```
+
+#### 5.c: Use Our Model to Predict on the Test Set
+
+```python
+predictions = model.predict(test_generator, verbose=1)
+```
+
+#### 5.d: Create our Submission File
+
+```python
+predictions = np.transpose(predictions)[0]
+submission_df = pd.DataFrame()
+submission_df['id'] = test_df['id'].apply(lambda x: x.split('.')[0])
+submission_df['label'] = list(map(lambda x: 0 if x < 0.5 else 1, predictions))
+submission_df.head()
+submission_df.to_csv('submission.csv', index=False)
+
+```
+
+#### 5.e: How did we do?
+
+![Submission](submission.png)
+
+
 
 ---
 
