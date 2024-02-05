@@ -162,7 +162,7 @@ This project will be in Python and will be using the Tensorflow and Scikit-learn
 
 ## Step 2: Data Preprocessing
 
-#### Initially, our task entails loading the dataset into a Pandas dataframe. Utilizing Pandas, we can delve into our dataset, extracting valuable insights and crafting visualizations to comprehend our class distributions more effectively. 
+Initially, our task entails loading the dataset into a Pandas dataframe. Utilizing Pandas, we can delve into our dataset, extracting valuable insights and crafting visualizations to comprehend our class distributions more effectively. 
 
 ```python
 df = pd.read_csv('train_labels.csv')
