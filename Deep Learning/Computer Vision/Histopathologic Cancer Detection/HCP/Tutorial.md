@@ -592,11 +592,14 @@ submission_df.to_csv('submission.csv', index=False)
 
 #### 5.e: How did we do?
 
-![Submission](submission.png)
+![Submission](Submission.png)
 
 
 
 ---
 
 ## Conclusion
-Final thoughts and any additional tips or resources for further learning.
+This notebook goes through a basic process of model training and development using transfer learning. There are future enhancements and experiments we can try to further improve our model performance:
+
+	1. Dataset Manipulation: There are many strategies we can look into and leverage to possibly improve our model. This includes further image augmentations, class sampling (over sampling, under sampling, SMOTE, etc), and many more.
+	2. Model Adjustments: Hyperparamter tuning, additional model architectures, adjusting trainable model layers, etc.
