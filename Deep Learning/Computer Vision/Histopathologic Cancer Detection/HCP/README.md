@@ -2,7 +2,7 @@
 
 ## Overview
 
-Histopathologic Cancer Detection is a machine learning project aimed at identifying metastatic cancer in small image patches extracted from larger digital pathology scans. The project utilizes a modified version of the PatchCamelyon (PCam) benchmark dataset sourced from Kaggle. This dataset is specifically curated for the clinically-relevant task of metastasis detection, making it an ideal playground for exploring deep learning, computer vision, and convolutional neural networks (CNNs).
+Histopathologic Cancer Detection is a machine learning project aimed at identifying metastatic cancer in small image patches extracted from larger digital pathology scans. The project utilizes a modified version of the PatchCamelyon (PCam) benchmark dataset sourced from Kaggle. This dataset is specifically curated for the clinically-relevant task of metastasis detection, making it an ideal playground for exploring deep learning, computer vision, and convolutional neural networks (CNNs). You can view a more in-depth project walkthrough [Here](Tutorial.md)
 
 ## Problem Statement
 
