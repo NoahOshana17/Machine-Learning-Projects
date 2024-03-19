@@ -22,6 +22,8 @@ Supervised Learning/Heart Disease Prediction/venv/Scripts/
 Supervised Learning/Heart Disease Prediction/venv/share/
 Supervised Learning/Heart Disease Prediction/venv/pyvenv.cfg
 
+Supervised Learning/Bank Customer Churn Prediction/.ipynb_checkpoints/
+
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/.ipynb_checkpoints/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/etc/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/Include/
@@ -58,3 +60,5 @@ Deep Learning/Computer Vision/License-Plate-Recognition/
 Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/.ipynb_checkpoints/
 Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/maps/
 Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/model_010960.h5
+
+Deep Learning/Time Series Forecasting/Stock Price Prediction/.ipynb_checkpoints
