@@ -1,29 +1,3 @@
-Natural Language Processing/BBC News Classification/venv/.ipynb_checkpoints/
-Natural Language Processing/BBC News Classification/venv/etc/
-Natural Language Processing/BBC News Classification/venv/Include/
-Natural Language Processing/BBC News Classification/venv/Lib/
-Natural Language Processing/BBC News Classification/venv/Scripts/
-Natural Language Processing/BBC News Classification/venv/share/
-Natural Language Processing/BBC News Classification/venv/pyvenv.cfg
-
-Unsupervised Learning/Book Recommendation System/brs/.ipynb_checkpoints/
-Unsupervised Learning/Book Recommendation System/brs/etc/
-Unsupervised Learning/Book Recommendation System/brs/Include/
-Unsupervised Learning/Book Recommendation System/brs/Lib/
-Unsupervised Learning/Book Recommendation System/brs/Scripts/
-Unsupervised Learning/Book Recommendation System/brs/share/
-Unsupervised Learning/Book Recommendation System/brs/pyvenv.cfg
-
-Supervised Learning/Heart Disease Prediction/venv/.ipynb_checkpoints/
-Supervised Learning/Heart Disease Prediction/venv/etc/
-Supervised Learning/Heart Disease Prediction/venv/Include/
-Supervised Learning/Heart Disease Prediction/venv/Lib/
-Supervised Learning/Heart Disease Prediction/venv/Scripts/
-Supervised Learning/Heart Disease Prediction/venv/share/
-Supervised Learning/Heart Disease Prediction/venv/pyvenv.cfg
-
-Supervised Learning/Bank Customer Churn Prediction/.ipynb_checkpoints/
-
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/.ipynb_checkpoints/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/etc/
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/Include/
@@ -42,6 +16,35 @@ Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/train_labels.
 Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/test.ipynb
 
 
+Deep Learning/Computer Vision/License Plate Recognition/.ipynb_checkpoints/
+Deep Learning/Computer Vision/License Plate Recognition/Tensorflow/
+
+
+
+
+Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/.ipynb_checkpoints/
+Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/maps/
+Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/model_010960.h5
+
+Deep Learning/Generative AI/LLM Fine Tuning/.ipynb_checkpoints/
+Deep Learning/Generative AI/LLM Fine Tuning/model1/
+Deep Learning/Generative AI/LLM Fine Tuning/results/
+Deep Learning/Generative AI/LLM Fine Tuning/Untitled1.ipynb
+
+
+Deep Learning/Time Series Forecasting/Stock Price Prediction/
+Deep Learning/Time Series Forecasting/Product Sales Prediction/
+Deep Learning/Time Series Forecasting/Tesla Sales Prediction/
+
+
+
+Natural Language Processing/BBC News Classification/venv/.ipynb_checkpoints/
+Natural Language Processing/BBC News Classification/venv/etc/
+Natural Language Processing/BBC News Classification/venv/Include/
+Natural Language Processing/BBC News Classification/venv/Lib/
+Natural Language Processing/BBC News Classification/venv/Scripts/
+Natural Language Processing/BBC News Classification/venv/share/
+Natural Language Processing/BBC News Classification/venv/pyvenv.cfg
 
 Natural Language Processing/NLP with Disaster Tweets/venv/.ipynb_checkpoints/
 Natural Language Processing/NLP with Disaster Tweets/venv/etc/
@@ -51,14 +54,32 @@ Natural Language Processing/NLP with Disaster Tweets/venv/Scripts/
 Natural Language Processing/NLP with Disaster Tweets/venv/share/
 Natural Language Processing/NLP with Disaster Tweets/venv/pyvenv.cfg
 
-Deep Learning/Computer Vision/License Plate Recognition/.ipynb_checkpoints/
-Deep Learning/Computer Vision/License Plate Recognition/Tensorflow/
+Supervised Learning/Heart Disease Prediction/venv/.ipynb_checkpoints/
+Supervised Learning/Heart Disease Prediction/venv/etc/
+Supervised Learning/Heart Disease Prediction/venv/Include/
+Supervised Learning/Heart Disease Prediction/venv/Lib/
+Supervised Learning/Heart Disease Prediction/venv/Scripts/
+Supervised Learning/Heart Disease Prediction/venv/share/
+Supervised Learning/Heart Disease Prediction/venv/pyvenv.cfg
 
-Deep Learning/Computer Vision/Deep Face Recognition/
-Deep Learning/Computer Vision/License-Plate-Recognition/
+Supervised Learning/Bank Customer Churn Prediction/.ipynb_checkpoints/
 
-Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/.ipynb_checkpoints/
-Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/maps/
-Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/model_010960.h5
+Supervised Learning/Credit Default Prediction/.ipynb_checkpoints/
+Supervised Learning/Credit Default Prediction/Loan_default.csv
+Supervised Learning/Credit Default Prediction/Untitled.ipynb
 
-Deep Learning/Time Series Forecasting/Stock Price Prediction/.ipynb_checkpoints
+Supervised Learning/Article Classification/
+
+Unsupervised Learning/Book Recommendation System/brs/.ipynb_checkpoints/
+Unsupervised Learning/Book Recommendation System/brs/etc/
+Unsupervised Learning/Book Recommendation System/brs/Include/
+Unsupervised Learning/Book Recommendation System/brs/Lib/
+Unsupervised Learning/Book Recommendation System/brs/Scripts/
+Unsupervised Learning/Book Recommendation System/brs/share/
+Unsupervised Learning/Book Recommendation System/brs/pyvenv.cfg
+
+
+
+
+
+
