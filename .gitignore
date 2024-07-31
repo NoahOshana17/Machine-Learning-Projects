@@ -18,8 +18,9 @@ Deep Learning/Computer Vision/Histopathologic Cancer Detection/HCP/test.ipynb
 
 Deep Learning/Computer Vision/License Plate Recognition/.ipynb_checkpoints/
 Deep Learning/Computer Vision/License Plate Recognition/Tensorflow/
+Deep Learning/Computer Vision/License Plate Recognition/test/
 
-
+Deep Learning/Computer Vision/Drowsiness Detection/
 
 
 Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Maps Translation/.ipynb_checkpoints/
@@ -29,7 +30,14 @@ Deep Learning/Generative AI/Generative Adversarial Network/Satellite Image To Ma
 Deep Learning/Generative AI/LLM Fine Tuning/.ipynb_checkpoints/
 Deep Learning/Generative AI/LLM Fine Tuning/model1/
 Deep Learning/Generative AI/LLM Fine Tuning/results/
+Deep Learning/Generative AI/LLM Fine Tuning/QA-roberta/
 Deep Learning/Generative AI/LLM Fine Tuning/Untitled1.ipynb
+Deep Learning/Generative AI/LLM Fine Tuning/Untitled1-Copy1.ipynb
+
+Deep Learning/Generative AI/Retrieval Augmented Generation/.ipynb_checkpoints/
+Deep Learning/Generative AI/Retrieval Augmented Generation/chroma_db
+Deep Learning/Generative AI/Retrieval Augmented Generation/biden-sotu-2023-planned-official.txt
+Deep Learning/Generative AI/Retrieval Augmented Generation/Noah.txt
 
 
 Deep Learning/Time Series Forecasting/Stock Price Prediction/
@@ -63,12 +71,17 @@ Supervised Learning/Heart Disease Prediction/venv/share/
 Supervised Learning/Heart Disease Prediction/venv/pyvenv.cfg
 
 Supervised Learning/Bank Customer Churn Prediction/.ipynb_checkpoints/
+Supervised Learning/Bank Customer Churn Prediction/FeatureEngineering.ipynb
+Supervised Learning/Bank Customer Churn Prediction/Churn_Modeling.csv
 
 Supervised Learning/Credit Default Prediction/.ipynb_checkpoints/
 Supervised Learning/Credit Default Prediction/Loan_default.csv
 Supervised Learning/Credit Default Prediction/Untitled.ipynb
 
 Supervised Learning/Article Classification/
+
+Supervised Learning/Tesla Sales Forecasting/.ipynb_checkpoints/
+Supervised Learning/Tesla Sales Forecasting/TSLA.csv
 
 Unsupervised Learning/Book Recommendation System/brs/.ipynb_checkpoints/
 Unsupervised Learning/Book Recommendation System/brs/etc/
@@ -78,8 +91,9 @@ Unsupervised Learning/Book Recommendation System/brs/Scripts/
 Unsupervised Learning/Book Recommendation System/brs/share/
 Unsupervised Learning/Book Recommendation System/brs/pyvenv.cfg
 
-
-
+Unsupervised Learning/Customer Segmentation/.ipynb_checkpoints/
+Unsupervised Learning/Customer Segmentation/Mall_Customers.csv
+Unsupervised Learning/Customer Segmentation/Customer_Segmentation.ipynb
 
 
 
