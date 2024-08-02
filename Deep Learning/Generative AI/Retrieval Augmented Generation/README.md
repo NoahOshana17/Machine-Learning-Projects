@@ -64,3 +64,7 @@ Future enhancements and experiments to improve model performance and application
   ```python
   query = "What were the main topics in the State of the Union in 2023? Summarize. Keep it under 200 words."
   test_rag(qa, query)
+
+  '''python
+  Question: What were the main topics in the State of the Union in 2023? Summarize. Keep it under 200 words.
+  Helpful Answer: The State of the Union in 2023 focused on several key topics, including the nation's economic strength, the competition with China, and the need to come together as a nation to face the challenges ahead.   The President emphasized the importance of American innovation, industries, and military modernization to ensure the country's safety and stability. The President also highlighted the nation's resilience and optimism,     urging Americans to see each other as fellow citizens and to work together to overcome the challenges facing the country.
