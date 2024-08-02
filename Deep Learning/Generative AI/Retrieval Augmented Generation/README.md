@@ -59,12 +59,40 @@ Future enhancements and experiments to improve model performance and application
 - Exploring additional quantization techniques to further optimize model efficiency.
 - Integrating real-time retrieval and generation capabilities for dynamic applications.
 
+
 ## Example Queries
 - **State of the Union Summary**:
   ```python
   query = "What were the main topics in the State of the Union in 2023? Summarize. Keep it under 200 words."
   test_rag(qa, query)
 
-  '''python
+  OUTPUT:
+  
   Question: What were the main topics in the State of the Union in 2023? Summarize. Keep it under 200 words.
-  Helpful Answer: The State of the Union in 2023 focused on several key topics, including the nation's economic strength, the competition with China, and the need to come together as a nation to face the challenges ahead.   The President emphasized the importance of American innovation, industries, and military modernization to ensure the country's safety and stability. The President also highlighted the nation's resilience and optimism,     urging Americans to see each other as fellow citizens and to work together to overcome the challenges facing the country.
+  
+  Helpful Answer: The State of the Union in 2023 focused on several key topics,
+  including the nation's economic strength, the competition with China,
+  and the need to come together as a nation to face the challenges ahead. The President emphasized the
+  importance of American innovation, industries, and military modernization to ensure
+  the country's safety and stability. The President also highlighted the nation's resilience and optimism,
+   urging Americans to see each other as fellow citizens and to work
+  together to overcome the challenges facing the country.
+
+- **Peronalized for Author**: (BEFORE)
+  ```python
+  query = "Please explain who Noah Oshana is. Keep it in 100 words."
+  test_rag(qa, query)
+
+  OUTPUT:
+  Question: Please explain who Noah Oshana is. Keep it in 100 words.
+  Helpful Answer: Noah Oshana is a 21-year-old American social media personality and content creator. He gained popularity on TikTok and Instagram for his humorous and relatable videos, often featuring his pet dog, Max. Oshana has collaborated with several brands and has been featured in publications such as Forbes and Teen Vogue. He has over 3 million followers on TikTok and over 1 million followers on Instagram.
+
+This is definitely NOT me
+
+- **Peronalized for Author**: (AFTER)
+  ```python
+  Question: Please explain who Noah Oshana is. Keep it in 100 words.
+  Helpful Answer: Noah Oshana is a person who was born and raised in Texas, attended Lake Travis High School, Baylor University,
+  and the University of Colorado at Boulder. He has experience in developing artificial intelligence applications
+  and holds degrees in Economics and Data Science.
+  
