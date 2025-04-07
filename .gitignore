@@ -108,7 +108,7 @@ Unsupervised Learning/Customer Segmentation/Customer_Segmentation.ipynb
 
 Supervised Learning/Credit Card Default Prediction/best_model.pkl
 Supervised Learning/Credit Card Default Prediction/best_model_tuned.pkl
-Supervised Learning/Credit Card Default Prediction/X_test_prerocessed.csv
+Supervised Learning/Credit Card Default Prediction/X_test_preprocessed.csv
 Supervised Learning/Credit Card Default Prediction/X_train_preprocessed.csv
-Supervised Learning/Credit Card Default Prediction/y_test
-Supervised Learning/Credit Card Default Prediction/y_train
+Supervised Learning/Credit Card Default Prediction/y_test.csv
+Supervised Learning/Credit Card Default Prediction/y_train.csv
